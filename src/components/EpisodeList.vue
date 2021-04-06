@@ -14,7 +14,7 @@
 }
 .episode-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: 100%;
   grid-gap: 10px;
 }
 </style>
