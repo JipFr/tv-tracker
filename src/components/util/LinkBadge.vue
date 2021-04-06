@@ -14,6 +14,16 @@
   text-decoration: none;
   color: var(--text-secondary);
 
+  &[to] {
+    cursor: pointer;
+  }
+  &[to]:hover {
+    background: var(--overlay-color-hover);
+  }
+  &[to]:active {
+    background: var(--overlay-color-active);
+  }
+
   &.do-offset {
     margin-left: -4px;
   }
