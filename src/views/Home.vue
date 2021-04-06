@@ -1,17 +1,17 @@
 <template>
   <div>
-    <HelloWorld />
+    <episode-list />
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import HelloWorld from "../components/HelloWorld.vue";
+import EpisodeList from "../components/EpisodeList.vue";
 
 export default defineComponent({
   name: "Home",
   components: {
-    HelloWorld,
+    EpisodeList,
   },
 });
 </script>
