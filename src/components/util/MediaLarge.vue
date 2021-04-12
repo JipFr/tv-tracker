@@ -19,8 +19,11 @@
               <chevron-right-icon size="16" />
             </link-badge>
             <h3 class="title">{{ data.title }}</h3>
-            <h4 class="subtitle" v-if="data.season">
+            <h4 v-if="data.season" class="subtitle">
               Season {{ data.season }}, episode {{ data.episode }}
+            </h4>
+            <h4 v-else class="subtitle">
+              {{ formatDate(data.date) }}
             </h4>
           </div>
           <div class="upcoming-side" v-if="dayCount > 0">
@@ -111,6 +114,30 @@ import LinkBadge from "./LinkBadge.vue";
 // Import icons
 import { ChevronRightIcon } from "@zhuowenli/vue-feather-icons";
 
+// Config
+const months = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+const days = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
 function clean(d: Date) {
   return new Date(d.toISOString().split("T")[0]);
 }
@@ -140,6 +167,15 @@ export default defineComponent({
     return {
       dayCount,
     };
+  },
+  methods: {
+    formatDate(dateString: Date | string) {
+      const d = new Date(dateString);
+      const date = d.getDate().toString();
+      const month = months[d.getMonth()].slice(0, 3);
+      const year = d.getFullYear();
+      return `${month} ${date} ${year}`;
+    },
   },
 });
 </script>

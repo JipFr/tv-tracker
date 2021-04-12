@@ -1,7 +1,7 @@
 import MediaLarge from "./MediaLarge.vue";
 
 export default {
-	title: "Info/EpisodeLarge",
+	title: "Info/MediaLarge",
 	component: MediaLarge,
 };
 
@@ -65,8 +65,8 @@ TvLargeFAM.args = {
 	},
 };
 
-export const MovieLargeEndgane = Template.bind({});
-MovieLargeEndgane.args = {
+export const MovieLargeEndgame = Template.bind({});
+MovieLargeEndgame.args = {
 	data: {
 		title: "Avengers: Endgame",
 		cover:
