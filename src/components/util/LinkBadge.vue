@@ -14,6 +14,21 @@
   text-decoration: none;
   color: var(--text-secondary);
 
+  &.icon-layout {
+    display: inline-grid;
+    align-items: center;
+    grid-template-columns: 1fr auto;
+    grid-gap: 4px;
+  }
+  &.white-text {
+    background: rgba(0, 0, 0, 0.1);
+    color: white;
+
+    &[to]:hover {
+      background: rgba(0, 0, 0, 0.2);
+    }
+  }
+
   &[to] {
     cursor: pointer;
   }

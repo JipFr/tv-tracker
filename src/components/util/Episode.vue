@@ -4,7 +4,7 @@
       <div class="episode-layout">
         <div class="episode-core">
           <h3>
-            <link-badge class="do-offset" to="/">
+            <link-badge class="do-offset icon-layout" to="/">
               <span>Person of Interest</span>
               <chevron-right-icon size="16" />
             </link-badge>
@@ -51,12 +51,6 @@
   }
   .sub {
     font-size: 0.9rem;
-  }
-  .link-badge {
-    display: grid;
-    align-items: center;
-    grid-template-columns: 1fr auto;
-    grid-gap: 4px;
   }
   .main-title {
     margin-top: 5px;
