@@ -1,4 +1,3 @@
-import StorybookWrapper from "../../stories/Wrapper.vue";
 import Episode from "./Episode.vue";
 
 export default {
@@ -9,7 +8,6 @@ export default {
 const Template = (args) => ({
 	components: {
 		Episode,
-		StorybookWrapper,
 	},
 	setup() {
 		return { args };

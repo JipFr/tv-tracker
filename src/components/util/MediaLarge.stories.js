@@ -1,26 +1,24 @@
-import StorybookWrapper from "../../stories/Wrapper.vue";
-import EpisodeLarge from "./EpisodeLarge.vue";
+import MediaLarge from "./MediaLarge.vue";
 
 export default {
 	title: "Info/EpisodeLarge",
-	component: EpisodeLarge,
+	component: MediaLarge,
 };
 
 const Template = (args) => ({
 	components: {
-		EpisodeLarge,
-		StorybookWrapper,
+		MediaLarge,
 	},
 	setup() {
 		return { args };
 	},
 	template: `
-   		<episode-large :data="args.data" style="width: 100%; max-width: 300px;" />
+   		<media-large :data="args.data" style="width: 100%; max-width: 300px;" />
   	`,
 });
 
-export const LargePOI = Template.bind({});
-LargePOI.args = {
+export const TvLargePOI = Template.bind({});
+TvLargePOI.args = {
 	data: {
 		title: "B.S.O.D",
 		season: 5,
@@ -35,8 +33,8 @@ LargePOI.args = {
 	},
 };
 
-export const LargeFlash = Template.bind({});
-LargeFlash.args = {
+export const TvLargeFlash = Template.bind({});
+TvLargeFlash.args = {
 	data: {
 		title: "Fear Me",
 		season: 7,
@@ -51,8 +49,8 @@ LargeFlash.args = {
 	},
 };
 
-export const LargeFAM = Template.bind({});
-LargeFAM.args = {
+export const TvLargeFAM = Template.bind({});
+TvLargeFAM.args = {
 	data: {
 		title: "Triage",
 		season: 2,
@@ -64,5 +62,16 @@ LargeFAM.args = {
 			href: "/tt1839578",
 		},
 		date: new Date("16 apr 2021"),
+	},
+};
+
+export const MovieLargeEndgane = Template.bind({});
+MovieLargeEndgane.args = {
+	data: {
+		title: "Avengers: Endgame",
+		cover:
+			"https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces/7RyHsO4yDXtBv1zUU3mTpHeQ0d5.jpg",
+		href: "/tt1839578",
+		date: new Date("24 apr 2019"),
 	},
 };

@@ -5,32 +5,35 @@
       background-image: url('${data.cover}');
     `"
   >
-    <div class="episode-large-ratio"></div>
-    <div class="episode-large-content-wrapper">
-      <div class="episode-large-content">
-        <div class="content-core">
-          <link-badge
-            class="do-offset icon-layout white-text"
-            :to="data.parent.href"
-          >
-            <span>{{ data.parent.name }}</span>
-            <chevron-right-icon size="16" />
-          </link-badge>
-          <h3 class="title">{{ data.title }}</h3>
-          <h4 class="subtitle" v-if="data.season">
-            Season {{ data.season }}, episode {{ data.episode }}
-          </h4>
-        </div>
-        <div class="upcoming-side" v-if="dayCount > 0">
-          <div class="upcoming-wrapper">
-            <h3 class="upcoming-title">{{ dayCount }}</h3>
-            <h4 class="upcoming-title-name">
-              {{ dayCount === 1 ? "day" : "days" }}
+    <router-link :to="data.href || ''">
+      <div class="episode-large-ratio"></div>
+      <div class="episode-large-content-wrapper">
+        <div class="episode-large-content">
+          <div class="content-core">
+            <link-badge
+              v-if="data.parent"
+              class="do-offset icon-layout white-text"
+              :to="data.parent.href"
+            >
+              <span>{{ data.parent.name }}</span>
+              <chevron-right-icon size="16" />
+            </link-badge>
+            <h3 class="title">{{ data.title }}</h3>
+            <h4 class="subtitle" v-if="data.season">
+              Season {{ data.season }}, episode {{ data.episode }}
             </h4>
+          </div>
+          <div class="upcoming-side" v-if="dayCount > 0">
+            <div class="upcoming-wrapper">
+              <h3 class="upcoming-title">{{ dayCount }}</h3>
+              <h4 class="upcoming-title-name">
+                {{ dayCount === 1 ? "day" : "days" }}
+              </h4>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </router-link>
   </article>
 </template>
 
@@ -73,7 +76,9 @@
   .title,
   .subtitle {
     margin: 0;
-    margin-top: 3px;
+  }
+  .title {
+    margin: 3px 0;
   }
   .subtitle {
     color: var(--text-secondary);
