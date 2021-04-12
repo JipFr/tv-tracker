@@ -20,8 +20,10 @@
     flex-wrap: nowrap;
     overflow-x: auto;
     grid-gap: 0; // Grid-gap works with flex now????
+    scroll-snap-type: x mandatory;
 
     > * {
+      scroll-snap-align: start;
       min-width: 300px;
       margin-right: 10px;
     }
