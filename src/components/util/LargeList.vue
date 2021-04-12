@@ -29,6 +29,11 @@
       min-width: 300px;
       margin-right: 10px;
     }
+    &::after {
+      display: block;
+      content: "";
+      min-width: 1px;
+    }
   }
 }
 </style>

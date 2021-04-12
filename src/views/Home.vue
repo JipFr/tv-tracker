@@ -28,6 +28,9 @@
       margin-left: 2.5vw;
     }
   }
+  .container-nested {
+    width: 100%;
+  }
 }
 </style>
 
