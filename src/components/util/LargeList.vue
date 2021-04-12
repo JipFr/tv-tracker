@@ -4,7 +4,7 @@
   </div>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .large-card-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
@@ -21,8 +21,10 @@
     overflow-x: auto;
     grid-gap: 0; // Grid-gap works with flex now????
     scroll-snap-type: x mandatory;
+    scroll-padding: 1rem;
 
     > * {
+      display: block;
       scroll-snap-align: start;
       min-width: 300px;
       margin-right: 10px;

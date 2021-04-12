@@ -49,6 +49,10 @@
   background-position: center;
   position: relative;
 
+  a {
+    color: inherit;
+  }
+
   --text: #e9ecef;
   --text-secondary: #ccd0d4;
   color: var(--text);

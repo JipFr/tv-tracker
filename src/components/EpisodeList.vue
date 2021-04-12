@@ -1,5 +1,5 @@
 <template>
-  <div class="mw">
+  <div>
     <div class="episode-list">
       <episode v-for="i in new Array(10).fill(0).map((_, i) => i)" :key="i" />
     </div>
@@ -7,11 +7,6 @@
 </template>
 
 <style lang="scss" scoped>
-.mw {
-  width: 90%;
-  max-width: 1300px;
-  margin: 40px auto;
-}
 .episode-list {
   display: grid;
   grid-template-columns: 100%;
